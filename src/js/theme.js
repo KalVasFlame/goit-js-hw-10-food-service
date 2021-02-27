@@ -8,27 +8,18 @@ const checkboxRef = document.querySelector('#theme-switch-toggle');
 
 const switchTheme = ({ LIGHT, DARK }) => { 
 if (checkboxRef.checked) {
-    localStorage.setItem('theme', Theme.DARK)
-    bodyRef.classList.remove(Theme.LIGHT)
-    bodyRef.classList.add(Theme.DARK)
+    localStorage.setItem('theme', DARK)
+    bodyRef.classList.remove(LIGHT)
+    bodyRef.classList.add(DARK)
   } else {
-    localStorage.setItem('theme', Theme.LIGHT)
-    bodyRef.classList.remove(Theme.DARK)
-    bodyRef.classList.add(Theme.LIGHT)
+    localStorage.setItem('theme', LIGHT)
+    bodyRef.classList.remove(DARK)
+    bodyRef.classList.add(LIGHT)
   }
 }
 
 const onCheckboxChange = () => { 
   switchTheme(Theme)
-  // if (checkboxRef.checked) {
-  //   localStorage.setItem('theme', Theme.DARK)
-  //   bodyRef.classList.remove(Theme.LIGHT)
-  //   bodyRef.classList.add(Theme.DARK)
-  // } else {
-  //   localStorage.setItem('theme', Theme.LIGHT)
-  //   bodyRef.classList.remove(Theme.DARK)
-  //   bodyRef.classList.add(Theme.LIGHT)
-  // }
 }
 
 const  saveSettings = () => {
